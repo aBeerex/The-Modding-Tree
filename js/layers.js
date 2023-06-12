@@ -26,17 +26,3 @@ addLayer("a", {
     ],
     layerShown(){return true}
 })
-
-addLayer("achiev", {
-	startData() { return {
-		unlocked: true,
-		points: new Decimal(0),
-	}}
-	name: "Achievements",
-	color: "#f6f7a1",
-	symbol: "✦",
-	position: 1,
-	row: 0,
-	layershown() {return true},
-	tooltip() {return ("Achievements")},
-})
