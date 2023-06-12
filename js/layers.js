@@ -25,4 +25,28 @@ addLayer("a", {
         {key: "a", description: "A: Reset for A", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
+}),
+
+addLayer("achiev", {
+	startData() { return {
+		unlocked: true,
+		points: new Decimal(0),
+	}}
+	name: "Achievements",
+	color: "#f6f7a1",
+	symbol: "✦",
+	row: "side",
+	layershown() {return true},
+	tooltip() {return ("Achievements")},
+	resource: "temp",
+	achievements: {
+		rows: 1
+		cols: 1
+		11: {
+			name: "Hey, You're Finally Awake",
+			tooltip: "Actually start playing the game and do an A reset.",
+			image: "https://i.kym-cdn.com/entries/icons/original/000/020/143/squidward.jpg",
+			done() { return player.a.A.gte(1) },
+		},
+	},
 })
