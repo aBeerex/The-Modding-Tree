@@ -25,23 +25,4 @@ addLayer("a", {
         {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
-}),
-
-addLayer("achiev", {
-    name: "Achievements",
-    symbol: "✦",
-    tooltip: "Achievements",
-    row: "side",
-    startData() { return {
-	    unlocked: true,
-    }}
-    achievements: {
-	11: {
-		name: "Hey, You're Finally Awake",
-		tooltip: "Start playing the game for real by resetting for A",
-		icon: "https://i.kym-cdn.com/entries/icons/original/000/020/143/squidward.jpg",
-		done() {return player.a.points.gte(1)}
-	}
-}
-    layerShown(){return true}
 })
