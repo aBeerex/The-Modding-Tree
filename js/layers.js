@@ -25,7 +25,7 @@ addLayer("a", {
         {key: "a", description: "A: Reset for A", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
-}),
+})
 
 addLayer("achiev", {
 	startData() { return {
