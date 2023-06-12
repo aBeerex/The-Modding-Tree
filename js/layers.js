@@ -14,6 +14,15 @@ addLayer("a", {
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.5, // Prestige currency exponent
+	
+    upgrades: {
+	    11: {
+		    title: "The Classic",
+		    description: "Double point gain.",
+		    cost: new Decimal(1),
+	    },
+    },
+	
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
         return mult
@@ -21,6 +30,7 @@ addLayer("a", {
     gainExp() { // Calculate the exponent on main currency from bonuses
         return new Decimal(1)
     },
+	
     hotkeys: [
         {key: "a", description: "A: Reset for A", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
