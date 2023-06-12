@@ -41,7 +41,7 @@ addLayer("achiev", {
 		name: "Hey, You're Finally Awake",
 		tooltip: "Start playing the game for real by resetting for A",
 		icon: "https://i.kym-cdn.com/entries/icons/original/000/020/143/squidward.jpg",
-		done() { return player.a.A.gte(1)}
+		done() {return true}
 	}
 }
     layerShown(){return true}
