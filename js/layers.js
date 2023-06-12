@@ -32,7 +32,7 @@ addLayer("achiev", {
 		unlocked: true,
 	}}
 	color: "#f6f7a1",
-	symbol: "✦",
+	symbol: "*",
 	row: "side",
 	layershown() {return true},
 	tooltip() {return ("Achievements")},
