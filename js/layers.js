@@ -35,7 +35,8 @@ addLayer("achiev", {
 	name: "Achievements",
 	color: "#f6f7a1",
 	symbol: "✦",
-	row: "side",
+	position: 1,
+	row: 0,
 	layershown() {return true},
 	tooltip() {return ("Achievements")},
 })
