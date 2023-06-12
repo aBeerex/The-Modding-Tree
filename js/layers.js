@@ -31,7 +31,6 @@ addLayer("achiev", {
     name: "Achievements",
     symbol: "✦",
     tooltip: "Achievements",
-    position: 0,
     row: "side",
     startData() { return {
 	    unlocked: true,
@@ -41,7 +40,7 @@ addLayer("achiev", {
 		name: "Hey, You're Finally Awake",
 		tooltip: "Start playing the game for real by resetting for A",
 		icon: "https://i.kym-cdn.com/entries/icons/original/000/020/143/squidward.jpg",
-		done() {return true}
+		done() {return player.a.points.gte(1)}
 	}
 }
     layerShown(){return true}
