@@ -26,3 +26,24 @@ addLayer("a", {
     ],
     layerShown(){return true}
 })
+
+addLayer("achiev", {
+	startData() { return {
+		unlocked: true,
+	}}
+	color: "#f6f7a1",
+	symbol: "✦",
+	row: "side",
+	layershown() {return true},
+	tooltip() {return ("Achievements")},
+	achievements: {
+		rows: 1
+		cols: 1
+		11: {
+			name: "Hey, You're Finally Awake",
+			tooltip: "Actually start playing the game and do an A reset.",
+			image: "https://i.kym-cdn.com/entries/icons/original/000/020/143/squidward.jpg",
+			done() { return player.a.A.gte(1) },
+		}
+	}
+})
