@@ -41,8 +41,13 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
-
+	
+	if (unlocked(player.a.upgrades.11) = true) {
+	let gain = new Decimal(2)
+	}
+	else {
 	let gain = new Decimal(1)
+	}
 	return gain
 }
 
