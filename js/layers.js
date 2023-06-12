@@ -22,7 +22,7 @@ addLayer("a", {
         return new Decimal(1)
     },
     hotkeys: [
-        {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "a", description: "A: Reset for A", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
 })
@@ -37,7 +37,8 @@ addLayer("achiev", {
 	row: "side",
 	layershown() {return true},
 	tooltip() {return ("Achievements")},
-		achievements: {
+	resource: "temp",
+	achievements: {
 		rows: 1
 		cols: 1
 		11: {
